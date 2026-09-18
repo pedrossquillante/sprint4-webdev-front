@@ -1,18 +1,18 @@
 @import "tailwindcss";
 
-@fontface {
+@font-face {
   font-family: "IBM Plex Sans";
   src: url('/fonts/IBMfont/IBMPlexSans-VariableFont_wdth,wght.ttf');
 }
 
 @theme {
-  --cor-primaria: #143fec;
-  --cor-fundo: #f5f5ff;
-  --cor-fundo-secundaria: #ffffff;
-  --cor-texto: #242933;
-  --cor-borda: #dfe1e6;
+  --color-primaria: #143fec;
+  --color-fundo: #f5f5ff;
+  --color-fundo-secundaria: #ffffff;
+  --color-texto: #242933;
+  --color-borda: #dfe1e6;
 
-  --fonte-principal:"IBM Plex Sans", sans-serif;
+  --font-principal:"IBM Plex Sans", sans-serif;
 }
 
 body {

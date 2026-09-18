@@ -40,7 +40,7 @@ export default function Footer() {
       <div className="flex justify-center gap-6 mt-4">
         {redes.map((rede) => (
           <a
-          
+
           key={rede.nome}
           href={rede.link}
           target="_blank"
@@ -49,7 +49,7 @@ export default function Footer() {
           >
           <Image
           src={rede.icone}
-          alt={"rede.alt"}
+          alt={rede.alt}
           width={20}
           height={20}
           className="inline-block align-middle -mr-[1.2rem] brightness-0 invert"
