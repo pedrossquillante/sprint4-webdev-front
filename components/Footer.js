@@ -5,53 +5,59 @@ export default function Footer() {
     {
       icone: "/icons/iconinstagram.svg",
       alt: "icone do Instagram",
-      classe: "icone-instagram",
       nome: "Instagram",
       link: "https://www.instagram.com/jovi.brasil?igsh=YXB1bW9lYTY5cXNm",
     },
     {
       icone: "/icons/icontiktok.svg",
       alt: "icone do tiktok",
-      classe: "icone-tiktok",
       nome: "Tiktok",
       link: "https://www.tiktok.com/@jovi.brasil",
     },
     {
       icone: "/icons/iconfacebook.svg",
       alt: "icone do facebook",
-      classe: "icone-facebook",
       nome: "Facebook",
       link: "https://www.facebook.com/JOVI.Brasil",
     },
     {
       icone: "/icons/iconyoutube.svg",
       alt: "icone do youtube",
-      classe: "icone-youtube",
       nome: "Youtube",
       link: "https://www.youtube.com/@Jovi.Brasil",
     },
     {
       icone: "/icons/iconlinkedIn.svg",
       alt: "icone do linkedin",
-      classe: "icone-linkedin",
       nome: "LinkedIn",
       link: "https://www.linkedin.com/company/jovi-mobile/",
     },
   ];
 
   return (
-    <footer>
-      <div className="redes-sociais">
+    <footer className="text-center p-6 bg-primaria text-fundo-secundaria border-t-[10px] border-primaria">
+      <p className="mx-auto text-fundo-secundaria">© 2026 Jovi Mobile. Todos os direitos reservados.</p>
+      <div className="flex justify-center gap-6 mt-4">
         {redes.map((rede) => (
-          <span key={rede.nome}>
-            <Image src={rede.icone} alt={rede.alt} className={rede.classe} />
-            <a href={rede.link} target="_blank" rel="noopener noreferrer">
-              {rede.nome}
-            </a>
-          </span>
+          <a
+          
+          key={rede.nome}
+          href={rede.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-fundo-secundaria no-underline transition-opacity hover:opacity-60"
+          >
+          <Image
+          src={rede.icone}
+          alt={"rede.alt"}
+          width={20}
+          height={20}
+          className="inline-block align-middle -mr-[1.2rem] brightness-0 invert"
+          />
+          {rede.nome}
+          </a>
         ))}
       </div>
-      <p>© 2026 Jovi Mobile. Todos os direitos reservados.</p>
     </footer>
   );
 }
