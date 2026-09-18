@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 export default function Footer() {
   const redes = [
@@ -35,26 +35,27 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="text-center p-6 bg-primaria text-fundo-secundaria border-t-[10px] border-primaria">
-      <p className="mx-auto text-fundo-secundaria">© 2026 Jovi Mobile. Todos os direitos reservados.</p>
+    <footer className="text-center p-6 bg-primaria text-fundo-secundaria border-t-10 border-primaria">
+      <p className="mx-auto text-fundo-secundaria">
+        © 2026 Jovi Mobile. Todos os direitos reservados.
+      </p>
       <div className="flex justify-center gap-6 mt-4">
         {redes.map((rede) => (
           <a
-
-          key={rede.nome}
-          href={rede.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-fundo-secundaria no-underline transition-opacity hover:opacity-60"
+            key={rede.nome}
+            href={rede.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-fundo-secundaria no-underline transition-opacity hover:opacity-60"
           >
-          <Image
-          src={rede.icone}
-          alt={rede.alt}
-          width={20}
-          height={20}
-          className="inline-block align-middle -mr-[1.2rem] brightness-0 invert"
-          />
-          {rede.nome}
+            <Image
+              src={rede.icone}
+              alt={rede.alt}
+              width={20}
+              height={20}
+              className="inline-block align-middle mr-[-1.2rem] brightness-0 invert"
+            />
+            {rede.nome}
           </a>
         ))}
       </div>
