@@ -1,8 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  title: 'Jovi Mobile | Landing Page',
-  icon: '', // mudar o icone para o da Jovi depois
+  title: 'Jovi Mobile | Landing Page'
 }
 
 export default function RootLayout({ children }) {
