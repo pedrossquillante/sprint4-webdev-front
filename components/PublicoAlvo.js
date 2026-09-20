@@ -2,19 +2,24 @@ import Image from 'next/image';
 
 export default function PublicoAlvo() {
   return (
-    <section className="container" id="publicoalvo">
-      <h2>Público-alvo</h2>
-      <div className="grid-publico">
-        <div className="texto-publico">
-          <h3>
+    <section className="max-w-330 mx-auto px-4 pt-22 pb-32" id="publicoalvo">
+      <h2 className="text-5xl font-bold tracking-[-0.02em] text-center mb-8 pb-8 relative after:content-[''] after:block after:w-[60px] after:h-[3px] after:bg-primaria after:mx-auto">
+        Público-alvo
+      </h2>
+
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:items-start">
+        <div className="bg-fundo-secundaria p-6 rounded-lg flex flex-col gap-4 shadow-[0_1px_3px_rgba(0,0,0,0.06)] transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(0,0,0,0.1)]">
+          <h3 className="text-[1.2rem] font-bold">
             <Image
               src="/icons/iconstudent.svg"
               alt="icone de estudante"
-              className="icone-estudante icone-azul"
+              width={20}
+              height={20}
+              className="inline-block align-middle mr-[0.4rem] filter invert-[21%] sepia-[99%] saturate-[3140%] hue-rotate-[224deg] brightness-[92%] contrast-[103%]"
             />
             Estudantes Full-Time
           </h3>
-          <p>
+          <p className="text-base leading-[1.6] max-w-[65ch] text-texto">
             Ser um estudante full-time exige-se viver uma rotina onde os
             estudos e a preparação para o mercado de trabalho se tornam o
             centro de tudo. Não é apenas assistir aulas diariamente, esse
@@ -32,10 +37,16 @@ export default function PublicoAlvo() {
             importa, seu desenvolvimento pessoal.
           </p>
         </div>
+
+        <div className="overflow-hidden rounded-xl">
         <Image
-          src="/images/estudantesfulltime.jpg"
-          alt="estudantes em sala de aula, interagindo com o celular na mão"
+        src="/images/estudantesfulltime.webp"
+        alt="estudantes em sala de aula, interagindo com o celular na mão"
+        width={1920}
+        height={1080}
+        className="w-full h-auto transition-transform duration-500 lg:hover:scale-105 lg:hover:brightness-105"
         />
+      </div>
       </div>
     </section>
   );

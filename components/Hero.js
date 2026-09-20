@@ -6,7 +6,7 @@ export default function Hero() {
       id="paginainicial"
       className="max-w-330 mx-auto px-4 pt-14 text-center lg:overflow-hidden"
     >
-      <h1 className="text-5xl font-bold tracking-[-0.02em] lg:text-[4.4rem] lg:max-w-275 lg:mx-auto lg:mb-8 lg:leading-none">
+      <h1 className="text-5xl font-bold tracking-[-0.02em] mb-6 lg:text-[4.4rem] lg:max-w-275 lg:mx-auto lg:mb-8 lg:leading-none">
         Descubra uma câmera que entende o que você precisa!
       </h1>
 
@@ -22,7 +22,7 @@ export default function Hero() {
         Testar agora
       </a>
 
-      <div className="relative w-full aspect-21/9 rounded-xl overflow-hidden">
+      <div className="relative w-full aspect-[21/9] rounded-xl overflow-hidden">
         <Image
           src="/images/estudante+funcionalidade.png"
           alt="Estudante apontando câmera pro caderno"

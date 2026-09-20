@@ -46,14 +46,14 @@ export default function Footer() {
             href={rede.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-fundo-secundaria no-underline transition-opacity hover:opacity-60"
+            className="flex items-center gap-2 text-fundo-secundaria no-underline transition-opacity hover:opacity-60"
           >
             <Image
               src={rede.icone}
               alt={rede.alt}
               width={20}
               height={20}
-              className="inline-block align-middle mr-[-1.2rem] brightness-0 invert"
+              className="brightness-0 invert"
             />
             {rede.nome}
           </a>
