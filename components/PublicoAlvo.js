@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function PublicoAlvo() {
   return (
-    <section className="max-w-330 mx-auto px-4 pt-22 pb-32" id="publicoalvo">
+    <section className="max-w-330 mx-auto px-4 pt-30 pb-32" id="publicoalvo">
       <h2 className="text-5xl font-bold tracking-[-0.02em] text-center mb-8 pb-8 relative after:content-[''] after:block after:w-[60px] after:h-[3px] after:bg-primaria after:mx-auto">
         Público-alvo
       </h2>

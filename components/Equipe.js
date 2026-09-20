@@ -30,7 +30,7 @@ export default function Equipe() {
   ];
 
   return (
-    <section className="max-w-330 mx-auto px-4 pt-16 pb-32" id="nossaequipe">
+    <section className="max-w-330 mx-auto px-4 pt-30 pb-32" id="nossaequipe">
       <h2 className="text-5xl font-bold tracking-[-0.02em] text-center mb-8 pb-8 relative after:content-[''] after:block after:w-[60px] after:h-[3px] after:bg-primaria after:mx-auto">
         Equipe Exptech
       </h2>

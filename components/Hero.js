@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section
       id="paginainicial"
-      className="max-w-330 mx-auto px-4 pt-14 text-center lg:overflow-hidden"
+      className="max-w-330 mx-auto px-4 pt-30 text-center lg:overflow-hidden"
     >
       <h1 className="text-5xl font-bold tracking-[-0.02em] mb-6 lg:text-[4.4rem] lg:max-w-275 lg:mx-auto lg:mb-8 lg:leading-none">
         Descubra uma câmera que entende o que você precisa!
