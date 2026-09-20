@@ -24,7 +24,7 @@ export default function Hero() {
 
       <div className="relative w-full aspect-[21/9] rounded-xl overflow-hidden">
         <Image
-          src="/images/estudante+funcionalidade.png"
+          src="/images/estudante-funcionalidade.webp"
           alt="Estudante apontando câmera pro caderno"
           fill
           className="object-cover object-[100%_33%] transition-all duration-500 lg:hover:scale-105 lg:hover:brightness-105"
