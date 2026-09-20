@@ -39,7 +39,7 @@ export default function Footer() {
       <p className="mx-auto text-fundo-secundaria">
         © 2026 Jovi Mobile. Todos os direitos reservados.
       </p>
-      <div className="flex justify-center gap-6 mt-4">
+      <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 mt-4">
         {redes.map((rede) => (
           <a
             key={rede.nome}
