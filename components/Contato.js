@@ -3,28 +3,50 @@ import Image from 'next/image';
 import { useState } from "react";
 
 export default function Contato() {
-  const [enviado, setEnviado] = useState(false);
-  const [form, setForm] = useState({
-    nome: "",
-    email: "",
-    telefone: "",
-    mensagem: "",
-  });
+const [enviado, setEnviado] = useState(false);
+const [enviando, setEnviando] = useState(false);
+const [erro, setErro] = useState("");
+const [form, setForm] = useState({
+  nome: "",
+  email: "",
+  telefone: "",
+  mensagem: "",
+});
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setForm((prev) => ({ ...prev, [name]: value }));
-  };
+const handleChange = (e) => {
+  const { name, value } = e.target;
+  setForm((prev) => ({ ...prev, [name]: value }));
+};
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Aqui entraria a chamada real de envio (API, e-mail etc.)
-    setEnviado(true);
-    setForm({ nome: "", email: "", telefone: "", mensagem: "" });
-    setTimeout(() => setEnviado(false), 4000);
-  };
+const handleSubmit = (e) => {
+  e.preventDefault();
+  setErro("");
+  setEnviando(true);
 
-return (
+  fetch("https://6ab06340ee9c55c910bfa50d.mockapi.io/api/sprint4-webdev-front/contatos", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(form),
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Falha ao enviar a mensagem. Tente novamente.");
+      }
+      setEnviado(true);
+      setForm({ nome: "", email: "", telefone: "", mensagem: "" });
+      setTimeout(() => setEnviado(false), 4000);
+    })
+    .catch((err) => {
+      setErro(err.message || "Ocorreu um erro inesperado. Tente novamente.");
+    })
+    .finally(() => {
+      setEnviando(false);
+    });
+};
+
+  return (
     <section className="max-w-330 mx-auto px-4 pt-30 pb-32" id="contato">
       <h2 className="text-5xl font-bold tracking-[-0.02em] text-center mb-8 pb-8 relative after:content-[''] after:block after:w-[60px] after:h-[3px] after:bg-primaria after:mx-auto">
         Contato
@@ -57,6 +79,7 @@ return (
             placeholder="Digite seu nome completo"
             value={form.nome}
             onChange={handleChange}
+            required
             className="p-3 border border-borda rounded font-principal focus:outline-none focus:border-primaria focus:shadow-[0_0_0_3px_rgba(20,63,236,0.15)]"
           />
         </div>
@@ -77,9 +100,10 @@ return (
             id="email"
             name="email"
             maxLength={35}
-            placeholder="email@hotmail.com"
+            placeholder="email@gmail.com"
             value={form.email}
             onChange={handleChange}
+            required
             className="p-3 border border-borda rounded font-principal focus:outline-none focus:border-primaria focus:shadow-[0_0_0_3px_rgba(20,63,236,0.15)]"
           />
         </div>
@@ -99,7 +123,7 @@ return (
             type="tel"
             id="telefone"
             name="telefone"
-            maxLength={12}
+            maxLength={15}
             placeholder="(99) 01234-5678"
             value={form.telefone}
             onChange={handleChange}
@@ -119,17 +143,25 @@ return (
             rows={5}
             value={form.mensagem}
             onChange={handleChange}
+            required
             className="p-3 border border-borda rounded font-principal focus:outline-none focus:border-primaria focus:shadow-[0_0_0_3px_rgba(20,63,236,0.15)]"
           />
         </div>
 
         <button
-        type="submit"
-        className="bg-primaria text-fundo-secundaria border-none py-3.5 px-6 rounded font-principal text-base font-bold cursor-pointer mb-8 transition-opacity duration-300 hover:opacity-60"
+          type="submit"
+          disabled={enviando}
+          className="bg-primaria text-fundo-secundaria border-none py-3.5 px-6 rounded font-principal text-base font-bold cursor-pointer mb-8 transition-opacity duration-300 hover:opacity-60 disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          Enviar Mensagem
+          {enviando ? "Enviando..." : "Enviar Mensagem"}
         </button>
       </form>
+
+      {erro && (
+        <p className="text-center text-red-600 font-bold mt-4">
+          {erro}
+        </p>
+      )}
 
       {enviado && (
         <p className="text-center text-primaria font-bold mt-4">
