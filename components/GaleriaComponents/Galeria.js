@@ -41,15 +41,19 @@ export default function Galeria() {
   }
 
   return (
-    <section className="container" id="galeria">
-      <h2>Galeria</h2>
-      <ul>
-        <li>
-          <div className="texto-galeria">
-            <h3>{conteudo.titulo}</h3>
-            <p>{conteudo.texto}</p>
+    <section className="max-w-330 mx-auto px-4 pt-24 pb-40" id="galeria">
+      <h2 className="text-5xl font-bold tracking-[-0.02em] text-center mb-8 pb-8 relative after:content-[''] after:block after:w-[60px] after:h-[3px] after:bg-primaria after:mx-auto">
+        Galeria
+      </h2>
+
+      <ul className="flex justify-center list-none">
+        <li className="w-full max-w-125 bg-fundo-secundaria p-6 rounded-lg text-center shadow-[0_1px_3px_rgba(0,0,0,0.06)] transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(0,0,0,0.1)]">
+          <div className="mb-4">
+            <h3 className="text-[1.2rem] font-bold mb-2">{conteudo.titulo}</h3>
+            <p className="text-base leading-[1.6] text-texto">{conteudo.texto}</p>
           </div>
-          <figure>
+          
+          <figure className="flex flex-col items-center gap-3">
             <div className="relative inline-block">
               <TelaAtual />
 
@@ -59,7 +63,7 @@ export default function Galeria() {
                     type="button"
                     onClick={() => setIndexAtual(2)}
                     aria-label="Ver tela da galeria"
-                    className="w-12 h-10 rounded-full bg-[#5779ff] text-white flex items-center justify-center cursor-pointer border-none text-xs"
+                    className="w-12 h-10 rounded-full bg-primaria text-fundo-secundaria flex items-center justify-center cursor-pointer border-none text-xs"
                   >
                     Galeria
                   </button>
@@ -67,7 +71,7 @@ export default function Galeria() {
                     type="button"
                     onClick={() => setIndexAtual(3)}
                     aria-label="Ver tela do PDF"
-                    className="w-12 h-10 rounded-full bg-[#5779ff] text-white flex items-center justify-center cursor-pointer border-none text-xs"
+                    className="w-12 h-10 rounded-full bg-primaria text-fundo-secundaria flex items-center justify-center cursor-pointer border-none text-xs"
                   >
                     PDF
                   </button>
@@ -77,13 +81,15 @@ export default function Galeria() {
                   type="button"
                   onClick={avancar}
                   aria-label="Ver próxima tela"
-                  className="absolute top-1/2 -right-12 -translate-y-1/2 w-10 h-10 rounded-full bg-[#5779ff] text-white flex items-center justify-center cursor-pointer border-none"
+                  className="absolute top-1/2 -right-12 -translate-y-1/2 w-10 h-10 rounded-full bg-primaria text-fundo-secundaria flex items-center justify-center cursor-pointer border-none"
                 >
                   →
                 </button>
               )}
             </div>
-            <figcaption>{conteudo.legenda}</figcaption>
+            <figcaption className="text-sm leading-[1.6] text-texto">
+              {conteudo.legenda}
+            </figcaption>
           </figure>
         </li>
       </ul>

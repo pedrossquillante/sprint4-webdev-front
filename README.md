@@ -70,7 +70,7 @@ itens instalados na sua máquina:
    http://localhost:3000
 
 
-# 5 - Onde foi utilizada a IA nesse projeto
+# 5 - Onde e como foi utilizada a IA nesse projeto
 
 xxxxxx
 
