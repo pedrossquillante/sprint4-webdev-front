@@ -2,7 +2,7 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import PublicoAlvo from "../components/PublicoAlvo";
 import Solucao from "../components/Solucao";
-import Galeria from "../components/Galeria";
+import Galeria from "../components/GaleriaComponents/Galeria";
 import Equipe from "../components/Equipe";
 import Contato from "../components/Contato";
 import Footer from "../components/Footer";
