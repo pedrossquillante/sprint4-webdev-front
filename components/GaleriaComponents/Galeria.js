@@ -8,19 +8,19 @@ const conteudos = [
     titulo: 'Pastas criadas automaticamente após a captura da foto!',
     texto: 'Suas fotos são organizadas na galeria de maneira prática!',
     legenda:
-      'Após o escaneamento da imagem, a funcionalidade identifica o contexto do texto que há nela, busca outras imagens que contenham informações iguais, e oferece a opção "Criar Pasta" que permite com que o conteúdo seja agrupado conforme o assunto, na galeria.',
+      'Esta é a página inicial, onde é possível acessar a funcionalidade que escaneia imagens. Nela é possível visualizar as fotos capturadas e acessar as opções de criação de pastas e geração de PDF.',
   },
   {
     titulo: 'Pastas criadas automaticamente após a captura da foto!',
     texto: 'Suas fotos são organizadas na galeria de maneira prática!',
     legenda:
-      'Após o escaneamento da imagem, a funcionalidade identifica o contexto do texto que há nela, busca outras imagens que contenham informações iguais, e oferece a opção "Criar Pasta" que permite com que o conteúdo seja agrupado conforme o assunto, na galeria.',
+      'Na interface da câmera, o sistema identifica em tempo real, textos sendo capturados, e sugere um escaneamento, num ícone que aparece na parte inferior da tela, após escanear, o usuário tem a opção de "Gerar PDF", o texto é extraído da imagem e acrescentado num novo arquivo PDF que fica salvo na área de arquivos do celular. E também existe a opção "Criar Pasta" que permite com que o conteúdo seja agrupado conforme o assunto, na galeria.',
   },
   {
     titulo: 'Gere arquivos PDF a partir da sua câmera!',
     texto: 'Você pode fazer das suas fotos de lousas, livros e anotações, um documento!',
-    legenda:
-      'Na interface da câmera, o sistema identifica em tempo real, textos sendo capturados, e sugere um escaneamento, num ícone que aparece na parte inferior da tela, após escanear, o usuário tem a opção de "Gerar PDF", o texto é extraído da imagem e acrescentado num novo arquivo PDF que fica salvo na área de arquivos do celular.',
+    legenda: 
+      'Após o escaneamento da imagem, a funcionalidade identifica o contexto do texto que há nela, busca outras imagens que contenham informações iguais E também o usuário tem a opção de "Gerar PDF", o texto é extraído da imagem e acrescentado num novo arquivo PDF que fica salvo na área de arquivos do celular.',
   },
   {
     titulo: 'Gere arquivos PDF através da sua galeria!',
@@ -65,7 +65,7 @@ export default function Galeria() {
                     aria-label="Ver tela da galeria"
                     className="w-12 h-10 rounded-full bg-primaria text-fundo-secundaria flex items-center justify-center cursor-pointer border-none text-xs"
                   >
-                    Galeria
+                    Pasta
                   </button>
                   <button
                     type="button"

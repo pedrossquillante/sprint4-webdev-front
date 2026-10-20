@@ -2,26 +2,24 @@ import Link from 'next/link';
 
 export default function BarraRodapeGerar() {
   return (
-    <footer className="absolute bg-black w-full h-[24%] bottom-[-1px]">
-      <div className="absolute w-full h-[30%] bg-black justify-around">
+    <footer className="absolute left-0 bg-black w-full h-[24%] bottom-[-1px]">
+      <div className="absolute top-0 left-0 w-full h-[30%] bg-black flex items-center justify-between pl-0 pr-[3%]">
         <span
-          className="absolute w-[28%] h-[55%] top-[10px] bg-transparent bg-no-repeat"
-          style={{ backgroundImage: "url(/icons3/PDF-N1.png)", backgroundSize: "80px" }}
+          className="block w-[24%] h-[60%] bg-transparent bg-no-repeat bg-contain bg-left"
+          style={{ backgroundImage: "url(/icons3/PDF-N1.png)" }}
         ></span>
         <span
-          className="absolute w-[23%] h-[60%] left-[85px] top-[10px] bg-transparent bg-no-repeat"
-          style={{ backgroundImage: "url(/icons3/PDF-N2.png)", backgroundSize: "65px" }}
+          className="block w-[21%] h-[60%] bg-transparent bg-no-repeat bg-contain bg-center"
+          style={{ backgroundImage: "url(/icons3/PDF-N2.png)" }}
         ></span>
-        <Link
-          href="/tela-pdf"
-          className="absolute block w-[23%] h-[60%] left-[152px] top-[10px] bg-transparent bg-no-repeat"
-          style={{ backgroundImage: "url(/icons3/PDF-N3.png)", backgroundSize: "68px" }}
-        ></Link>
-        <Link
-          href="/tela-galeria"
-          className="absolute block w-[25%] h-[60%] left-[220px] top-[10px] bg-transparent bg-no-repeat"
-          style={{ backgroundImage: "url(/icons3/btN4.png)", backgroundSize: "78px" }}
-        ></Link>
+        <span
+          className="block w-[21%] h-[60%] bg-transparent bg-no-repeat bg-contain bg-center"
+          style={{ backgroundImage: "url(/icons3/PDF-N3.png)" }}
+        ></span>
+        <span
+          className="block w-[24%] h-[60%] bg-transparent bg-no-repeat bg-contain bg-center"
+          style={{ backgroundImage: "url(/icons3/btN4.png)" }}
+        ></span>
       </div>
 
       <div className="absolute w-full h-[30%] bg-black top-[71%]">

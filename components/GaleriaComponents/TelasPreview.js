@@ -139,24 +139,24 @@ function TelaGerarPreview() {
         style={{ backgroundImage: "url(/icons3/telaPDF.png)", backgroundSize: "300px" }}
       />
       <footer className="absolute bg-black w-full h-[24%] bottom-[-1px]">
-        <div className="absolute w-full h-[30%] bg-black">
-          <span
-            className="absolute w-[28%] h-[55%] top-[10px] bg-transparent bg-no-repeat"
-            style={{ backgroundImage: "url(/icons3/PDF-N1.png)", backgroundSize: "80px" }}
-          />
-          <span
-            className="absolute w-[23%] h-[60%] left-[85px] top-[10px] bg-transparent bg-no-repeat"
-            style={{ backgroundImage: "url(/icons3/PDF-N2.png)", backgroundSize: "65px" }}
-          />
-          <span
-            className="absolute w-[23%] h-[60%] left-[152px] top-[10px] bg-transparent bg-no-repeat"
-            style={{ backgroundImage: "url(/icons3/PDF-N3.png)", backgroundSize: "68px" }}
-          />
-          <span
-            className="absolute w-[25%] h-[60%] left-[220px] top-[10px] bg-transparent bg-no-repeat"
-            style={{ backgroundImage: "url(/icons3/btN4.png)", backgroundSize: "78px" }}
-          />
-        </div>
+       <div className="absolute top-0 left-0 w-full h-[30%] bg-black flex items-center justify-between pl-0 pr-[3%]">
+        <span
+          className="block w-[24%] h-[60%] bg-transparent bg-no-repeat bg-contain bg-left"
+          style={{ backgroundImage: "url(/icons3/PDF-N1.png)" }}
+        ></span>
+        <span
+          className="block w-[21%] h-[60%] bg-transparent bg-no-repeat bg-contain bg-center"
+          style={{ backgroundImage: "url(/icons3/PDF-N2.png)" }}
+        ></span>
+        <span
+          className="block w-[21%] h-[60%] bg-transparent bg-no-repeat bg-contain bg-center"
+          style={{ backgroundImage: "url(/icons3/PDF-N3.png)" }}
+        ></span>
+        <span
+          className="block w-[24%] h-[60%] bg-transparent bg-no-repeat bg-contain bg-center"
+          style={{ backgroundImage: "url(/icons3/btN4.png)" }}
+        ></span>
+      </div>
         <div className="absolute w-full h-[30%] bg-black top-[71%]">
           <span
             className="absolute w-[10%] h-[70%] top-[6px] left-[35px] bg-transparent bg-no-repeat"
