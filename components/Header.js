@@ -8,27 +8,31 @@ export default function Header() {
   const fecharMenu = () => setMenuAberto(false);
 
   const linkClasses =
-    "relative text-primaria no-underline font-bold transition-opacity duration-300 hover:opacity-30 after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-primaria after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100";
+    "relative text-destaque no-underline font-bold after:content-[''] after:absolute after:bottom-1.5 after:left-0 after:w-full after:h-0.5 after:bg-destaque after:scale-x-0 motion-safe:after:transition-transform motion-safe:after:duration-300 hover:after:scale-x-100 inline-block py-2.5 focus-visible:after:scale-x-100";
 
   return (
-    <header className="lg:sticky lg:top-0 lg:z-10 lg:py-4">
+    <header className="sticky top-0 z-10 lg:py-4 lg:bg-transparent lg:backdrop-blur-none lg:border-b-0 bg-fundo/80 backdrop-blur-md border-b border-borda">
+      <a href="#conteudo" className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-4 focus:z-20 focus:bg-primaria focus:text-sobre-primaria focus:rounded-full focus:px-4 focus:py-2">Pular para o conteúdo</a>
       <div className="max-w-330 mx-auto px-4">
-        <nav className="lg:flex lg:justify-center lg:items-center lg:relative lg:bg-fundo-secundaria lg:rounded-full lg:py-3 lg:px-8 lg:shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
-          <div className="text-2xl font-bold text-center bg-fundo-secundaria rounded-full py-3 px-12 block w-fit mx-auto mt-6 mb-4 lg:absolute lg:left-8 lg:top-1/2 lg:-translate-y-1/2 lg:transition-transform lg:duration-300 lg:bg-transparent lg:p-0 lg:rounded-none lg:w-auto lg:m-0 lg:hover:scale-110">
+        <nav aria-label="Principal" className="flex flex-wrap items-center justify-between py-3 lg:flex-nowrap lg:justify-center lg:items-center lg:relative lg:bg-fundo-secundaria lg:rounded-full lg:py-1 lg:px-8 lg:shadow-sm lg:dark:shadow-none lg:dark:border lg:dark:border-borda">
+          <a href="#paginainicial" onClick={fecharMenu} aria-label="JOVI, página inicial" className="font-titulo text-2xl font-bold text-destaque lg:absolute lg:left-8 lg:top-1/2 lg:-translate-y-1/2 motion-safe:transition-transform motion-safe:duration-300 lg:hover:scale-110">
             JOVI
-          </div>
+          </a>
 
           <button
-            className="bg-transparent border-none text-2xl text-primaria cursor-pointer p-2 lg:hidden"
-            id="menuToggle"
-            aria-label="Abrir menu"
+            className="size-11 inline-flex items-center justify-center rounded-full text-2xl text-destaque cursor-pointer lg:hidden"
+            type="button"
+            aria-expanded={menuAberto}
+            aria-controls="menu-principal"
+            aria-label={menuAberto ? "Fechar menu" : "Abrir menu"}
             onClick={() => setMenuAberto((prev) => !prev)}
           >
-            ☰
+            {menuAberto ? "✕" : "☰"}
           </button>
 
           <ul
-            className={`${menuAberto ? "flex" : "hidden"} flex-col list-none items-start lg:flex lg:flex-row lg:gap-8 lg:items-center`}
+            id="menu-principal"
+            className={`${menuAberto ? "flex" : "hidden"} w-full gap-1 pb-4 flex-col list-none items-start lg:flex lg:flex-row lg:gap-8 lg:items-center lg:w-auto lg:pb-0`}
           >
             <li>
               <a

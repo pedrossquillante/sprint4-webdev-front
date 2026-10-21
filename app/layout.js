@@ -6,7 +6,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" className="motion-safe:scroll-smooth">
       <body>{children}</body>
     </html>
   );

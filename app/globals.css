@@ -2,7 +2,17 @@
 
 @font-face {
   font-family: "IBM Plex Sans";
-  src: url('/fonts/IBMfont/IBMPlexSans-VariableFont_wdth,wght.ttf');
+  src: url('/fonts/IBMfont/IBMPlexSans-VariableFont_wdth,wght.ttf') format("truetype");
+  font-weight: 100 700;
+  font-stretch: 85% 100%;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Sora";
+  src: url('/fonts/Sorafont/Sora-VariableFont_wght.ttf') format("truetype");
+  font-weight: 100 800;
+  font-display: swap;
 }
 
 @theme {
@@ -11,12 +21,66 @@
   --color-fundo-secundaria: #ffffff;
   --color-texto: #242933;
   --color-borda: #dfe1e6;
+  --color-primaria-hover: #1032bd;
+  --color-borda-campo: #868b94;
+  --color-texto-suave: #5b6170;
+  --color-sobre-primaria: #ffffff;
+  --color-destaque: #143fec;
+  --color-erro: #c81e1e;
 
   --font-principal:"IBM Plex Sans", sans-serif;
+  --font-titulo:"Sora", sans-serif;
+
+  --animate-surgir: surgir 0.6s ease-out both;
+
+  @keyframes surgir {
+    from {
+      opacity: 0;
+      transform: translateY(1rem);
+    }
+
+    to {
+      opacity:1;
+      transform: translateY(0);
+    }
+  }
 }
 
-body {
+@layer base {
+  body {
   background-color: var(--color-fundo);
-  color: var(--color-primaria);
+  color: var(--color-texto);
   font-family: var(--font-principal);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-titulo);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-fundo: #0e1120;
+    --color-fundo-secundaria: #181c2e;
+    --color-texto: #e6e8f0;
+    --color-texto-suave: #a3a8b8;
+    --color-destaque: #8ea2ff;
+    --color-borda: #2b3047;
+    --color-borda-campo: #7a8094;
+    --color-erro: #ff8a8a;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-destaque);
+  outline-offset: 2px;
+  }
+
+::selection {
+  background-color: var(--color-primaria);
+  color: var(--color-sobre-primaria);
+  }
+
+:root {
+  color-scheme: light dark;
+}
 }
