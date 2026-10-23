@@ -12,10 +12,23 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-10 lg:py-4 lg:bg-transparent lg:backdrop-blur-none lg:border-b-0 bg-fundo/80 backdrop-blur-md border-b border-borda">
-      <a href="#conteudo" className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-4 focus:z-20 focus:bg-primaria focus:text-sobre-primaria focus:rounded-full focus:px-4 focus:py-2">Pular para o conteúdo</a>
+      <a
+        href="#conteudo"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-4 focus:z-20 focus:bg-primaria focus:text-sobre-primaria focus:rounded-full focus:px-4 focus:py-2"
+      >
+        Pular para o conteúdo
+      </a>
       <div className="max-w-330 mx-auto px-4">
-        <nav aria-label="Principal" className="flex flex-wrap items-center justify-between py-3 lg:flex-nowrap lg:justify-center lg:items-center lg:relative lg:bg-fundo-secundaria lg:rounded-full lg:py-1 lg:px-8 lg:shadow-sm lg:dark:shadow-none lg:dark:border lg:dark:border-borda">
-          <a href="#paginainicial" onClick={fecharMenu} aria-label="JOVI, página inicial" className="font-titulo text-2xl font-bold text-destaque lg:absolute lg:left-8 lg:top-1/2 lg:-translate-y-1/2 motion-safe:transition-transform motion-safe:duration-300 lg:hover:scale-110">
+        <nav
+          aria-label="Principal"
+          className="flex flex-wrap items-center justify-between py-3 lg:flex-nowrap lg:justify-center lg:items-center lg:relative lg:bg-fundo-secundaria lg:rounded-full lg:py-1 lg:px-8 lg:shadow-sm lg:dark:shadow-none lg:dark:border lg:dark:border-borda"
+        >
+          <a
+            href="#paginainicial"
+            onClick={fecharMenu}
+            aria-label="JOVI, página inicial"
+            className="font-titulo text-2xl font-bold text-destaque lg:absolute lg:left-8 lg:top-1/2 lg:-translate-y-1/2 motion-safe:transition-transform motion-safe:duration-300 lg:hover:scale-110"
+          >
             JOVI
           </a>
 
