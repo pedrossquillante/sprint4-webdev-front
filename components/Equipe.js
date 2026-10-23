@@ -30,30 +30,31 @@ export default function Equipe() {
   ];
 
   return (
-    <section className="max-w-330 mx-auto px-4 pt-30 pb-32" id="nossaequipe">
-      <h2 className="text-5xl font-bold tracking-[-0.02em] text-center mb-8 pb-8 relative after:content-[''] after:block after:w-[60px] after:h-[3px] after:bg-primaria after:mx-auto">
+    <section className="max-w-330 mx-auto px-4 py-16 lg:py-24 scroll-mt-20 lg:scroll-mt-24" id="nossaequipe">
+      <h2 className="titulo-secao">
         Equipe Exptech
       </h2>
 
-      <ul className="grid grid-cols-1 gap-6 list-none md:grid-cols-3 lg:grid-cols-5">
+      <ul role="list" className="flex flex-wrap justify-center gap-4 md:gap-6 list-none">
         {membros.map((membro) => (
           <li
             key={membro.nome}
-            className="bg-fundo-secundaria p-6 rounded-lg text-center shadow-[0_1px_3px_rgba(0,0,0,0.06)] transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(0,0,0,0.1)]"
+            className="card text-center w-[calc(50%_-_0.5rem)] md:w-[calc((100%_-_3rem)_/_3)] lg:w-[calc((100%_-_6rem)_/_5)]"
             >
               <figure className="flex flex-col gap-3">
               <Image 
                 src={membro.img}
-                alt={`Imagem de ${membro.nome}`}
+                alt=""
                 width={200}
-                height={200} 
-                className="rounded-full aspect-square object-cover max-w-[140px] mx-auto"
+                height={200}
+                sizes="140px"
+                className="w-full max-w-35 aspect-square rounded-full object-cover mx-auto ring-4 ring-destaque/20"
               />
-              <figcaption className="flex flex-col text-texto">
-                <span className="font-bold text-primaria text-[1.05rem]">
+              <figcaption className="flex flex-col">
+                <span className="font-titulo font-bold text-lg text-destaque">
                   {membro.nome}
                 </span>
-                <span className="text-[0.9rem] opacity-70">
+                <span className="text-sm text-texto-suave">
                   {membro.cargo}
                 </span>
               </figcaption>
