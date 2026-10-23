@@ -31,15 +31,17 @@ itens instalados na sua máquina:
 2. Abra a pasta clonada em um editor ou terminal:
 
    Opção 1 - VS Code:
-   - Abra o VS Code > Arquivo > Abrir Pasta > selecione a pasta clonada
+   - Abra o VS Code > Arquivo > Abrir Pasta > selecione a pasta clonada 
    - Terminal > Novo Terminal
+   - Escolha a opção do terminal >bash<
+   - digite: cd <nome-da-pasta-do-projeto> (Entra na pasta que o Git acabou de criar)
+   - digite: npm install (Instala todas as dependências necessárias)
+   - digite: code . (Abre o projeto no VS Code)
 
    Opção 2 - Terminal nativo do sistema:
    - Abra o terminal do seu sistema operacional
    - Navegue até a pasta: cd caminho/da/pasta/clonada
-
-3. Instale as dependências:
-   npm install
+   - digite: npm install (Instala todas as dependências necessárias)
 
 ## Via arquivo ZIP
 
@@ -50,14 +52,14 @@ itens instalados na sua máquina:
    Opção 1 - VS Code:
    - Abra o VS Code > Arquivo > Abrir Pasta > selecione a pasta extraída
    - Terminal > Novo Terminal
+   - Escolha a opção do terminal >bash<
+   - digite: npm install (Instala todas as dependências necessárias)
 
    Opção 2 - Terminal nativo do sistema:
    - Abra o terminal do seu sistema operacional
    - Navegue até a pasta: cd caminho/da/pasta/extraida
-
-3. Instale as dependências:
-   npm install
-
+   - digite: npm install (Instala todas as dependências necessárias)
+  
 # 4 - Como executar o projeto
 
 1. Certifique-se de que as dependências já foram instaladas em
