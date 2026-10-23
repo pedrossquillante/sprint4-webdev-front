@@ -1,5 +1,4 @@
 "use client";
-import Image from 'next/image';
 import { useState } from "react";
 
 export default function Contato() {
@@ -21,6 +20,7 @@ const handleChange = (e) => {
 const handleSubmit = (e) => {
   e.preventDefault();
   setErro("");
+  setEnviado(false);
   setEnviando(true);
 
   fetch("https://6ab06340ee9c55c910bfa50d.mockapi.io/api/sprint4-webdev-front/contatos", {
@@ -36,7 +36,6 @@ const handleSubmit = (e) => {
       }
       setEnviado(true);
       setForm({ nome: "", email: "", telefone: "", mensagem: "" });
-      setTimeout(() => setEnviado(false), 4000);
     })
     .catch((err) => {
       setErro(err.message || "Ocorreu um erro inesperado. Tente novamente.");
@@ -46,30 +45,24 @@ const handleSubmit = (e) => {
     });
 };
 
+const campoClasses =
+  "w-full min-h-11 px-4 py-3 rounded-xl border border-borda-campo bg-fundo text-texto placeholder:text-texto-suave focus:border-destaque motion-safe:transition-colors"
+
+const rotuloClasses =
+  "flex items-center gap-2 font-bold"
+
   return (
-    <section className="max-w-330 mx-auto px-4 pt-30 pb-32" id="contato">
-      <h2 className="text-5xl font-bold tracking-[-0.02em] text-center mb-8 pb-8 relative after:content-[''] after:block after:w-[60px] after:h-[3px] after:bg-primaria after:mx-auto">
+    <section className="max-w-330 mx-auto px-4 py-16 lg:py-24 scroll-mt-20 lg:scroll-mt-24" id="contato">
+      <h2 className="titulo-secao">
         Contato
       </h2>
-
-      <div className="mb-16">
-        <h3 className="text-[25px] flex justify-center items-center text-center font-bold">
-          Deseja testar nossa funcionalidade de maneira exclusiva? Entre em
-          contato conosco!
-        </h3>
-      </div>
-
-      <form onSubmit={handleSubmit} className="flex flex-col justify-center gap-6">
+      <p className="text-xl lg:text-2xl font-bold text-center max-w-2xl mx-auto mb-10">Deseja testar nossa funcionalidade de maneira exclusiva? Entre em contato conosco!</p>
+      
+      <form onSubmit={handleSubmit} className="card max-w-2xl mx-auto flex flex-col gap-6">
         <div className="flex flex-col gap-2">
-          <label htmlFor="nome" className="flex items-center gap-2 font-bold">
-            <Image
-              src="/icons/iconuser.svg"
-              alt="icone do usuário"
-              width={18}
-              height={18}
-              className="filter invert-[21%] sepia-[99%] saturate-[3140%] hue-rotate-[224deg] brightness-[92%] contrast-[103%]"
-            />
-            Nome
+          <label htmlFor="nome" className={rotuloClasses}>
+            <span aria-hidden="true" className="icone size-4.5 mask-[url(/icons/iconuser.svg)]"/>
+            Nome Completo
           </label>
           <input
             type="text"
@@ -80,43 +73,33 @@ const handleSubmit = (e) => {
             value={form.nome}
             onChange={handleChange}
             required
-            className="p-3 border border-borda rounded font-principal focus:outline-none focus:border-primaria focus:shadow-[0_0_0_3px_rgba(20,63,236,0.15)]"
+            className={campoClasses}
+            autoComplete="name"
           />
         </div>
 
         <div className="flex flex-col gap-2">
-          <label htmlFor="email" className="flex items-center gap-2 font-bold">
-            <Image
-              src="/icons/iconenvelope.svg"
-              alt="icone de e-mail"
-              width={18}
-              height={18}
-              className="filter invert-[21%] sepia-[99%] saturate-[3140%] hue-rotate-[224deg] brightness-[92%] contrast-[103%]"
-            />
+          <label htmlFor="email" className={rotuloClasses}>
+            <span aria-hidden="true" className="icone size-4.5 mask-[url(/icons/iconenvelope.svg)]"/>
             E-mail
           </label>
           <input
             type="email"
             id="email"
             name="email"
-            maxLength={35}
+            maxLength={254}
             placeholder="email@gmail.com"
             value={form.email}
             onChange={handleChange}
             required
-            className="p-3 border border-borda rounded font-principal focus:outline-none focus:border-primaria focus:shadow-[0_0_0_3px_rgba(20,63,236,0.15)]"
+            className={campoClasses}
+            autoComplete="email"
           />
         </div>
 
         <div className="flex flex-col gap-2">
-          <label htmlFor="telefone" className="flex items-center gap-2 font-bold">
-            <Image
-              src="/icons/iconphone.svg"
-              alt="icone do telefone"
-              width={18}
-              height={18}
-              className="filter invert-[21%] sepia-[99%] saturate-[3140%] hue-rotate-[224deg] brightness-[92%] contrast-[103%]"
-            />
+          <label htmlFor="telefone" className={rotuloClasses}>
+            <span aria-hidden="true" className="icone size-4.5 mask-[url(/icons/iconphone.svg)]"/>
             Telefone
           </label>
           <input
@@ -127,12 +110,13 @@ const handleSubmit = (e) => {
             placeholder="(99) 01234-5678"
             value={form.telefone}
             onChange={handleChange}
-            className="p-3 border border-borda rounded font-principal focus:outline-none focus:border-primaria focus:shadow-[0_0_0_3px_rgba(20,63,236,0.15)]"
+            className={campoClasses}
+            autoComplete="tel"
           />
         </div>
 
         <div className="flex flex-col gap-2">
-          <label htmlFor="mensagem" className="flex items-center gap-2 font-bold">
+          <label htmlFor="mensagem" className={rotuloClasses}>
             Mensagem
           </label>
           <textarea
@@ -144,30 +128,33 @@ const handleSubmit = (e) => {
             value={form.mensagem}
             onChange={handleChange}
             required
-            className="p-3 border border-borda rounded font-principal focus:outline-none focus:border-primaria focus:shadow-[0_0_0_3px_rgba(20,63,236,0.15)]"
+            className={campoClasses}
           />
         </div>
 
         <button
           type="submit"
           disabled={enviando}
-          className="bg-primaria text-fundo-secundaria border-none py-3.5 px-6 rounded font-principal text-base font-bold cursor-pointer mb-8 transition-opacity duration-300 hover:opacity-60 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full min-h-11 inline-flex items-center justify-center px-8 rounded-full font-bold bg-primaria text-sobre-primaria hover:bg-primaria-hover focus-visible:bg-primaria-hover motion-safe:transition-colors cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {enviando ? "Enviando..." : "Enviar Mensagem"}
         </button>
       </form>
 
+      <div aria-live="polite" className="max-w-2xl mx-auto mt-6 text-center font-bold">
       {erro && (
-        <p className="text-center text-red-600 font-bold mt-4">
+        <p className="text-erro">
           {erro}
         </p>
       )}
 
       {enviado && (
-        <p className="text-center text-primaria font-bold mt-4">
+        <p className="text-destaque">
           Mensagem enviada com sucesso!
         </p>
       )}
+      </div>
+
     </section>
   );
 }
