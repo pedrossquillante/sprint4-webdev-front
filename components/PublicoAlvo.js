@@ -2,24 +2,18 @@ import Image from 'next/image';
 
 export default function PublicoAlvo() {
   return (
-    <section className="max-w-330 mx-auto px-4 pt-30 pb-32" id="publicoalvo">
-      <h2 className="text-5xl font-bold tracking-[-0.02em] text-center mb-8 pb-8 relative after:content-[''] after:block after:w-[60px] after:h-[3px] after:bg-primaria after:mx-auto">
+    <section className="max-w-330 mx-auto px-4 py-16 lg:py-24 scroll-mt-20 lg:scroll-mt-24" id="publicoalvo">
+      <h2 className="titulo-secao">
         Público-alvo
       </h2>
 
-      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:items-start">
-        <div className="bg-fundo-secundaria p-6 rounded-lg flex flex-col gap-4 shadow-[0_1px_3px_rgba(0,0,0,0.06)] transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(0,0,0,0.1)]">
-          <h3 className="text-[1.2rem] font-bold">
-            <Image
-              src="/icons/iconstudent.svg"
-              alt="icone de estudante"
-              width={20}
-              height={20}
-              className="inline-block align-middle mr-[0.4rem] filter invert-[21%] sepia-[99%] saturate-[3140%] hue-rotate-[224deg] brightness-[92%] contrast-[103%]"
-            />
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <div className="card flex flex-col gap-4">
+          <div className="icone-caixa" aria-hidden="true"><span className="icone size-6 mask-[url(/icons/iconstudent.svg)]"/></div>
+          <h3 className="text-xl font-bold">
             Estudantes Full-Time
           </h3>
-          <p className="text-base leading-[1.6] max-w-[65ch] text-texto">
+          <p className="text-base leading-relaxed max-w-prose">
             Ser um estudante full-time exige-se viver uma rotina onde os
             estudos e a preparação para o mercado de trabalho se tornam o
             centro de tudo. Não é apenas assistir aulas diariamente, esse
@@ -38,13 +32,14 @@ export default function PublicoAlvo() {
           </p>
         </div>
 
-        <div className="overflow-hidden rounded-xl">
+        <div className="overflow-hidden rounded-2xl lg:h-full">
         <Image
-        src="/images/estudantesfulltime.webp"
+        src="/images/estudantesfulltime1.webp"
         alt="estudantes em sala de aula, interagindo com o celular na mão"
         width={1920}
         height={1080}
-        className="w-full h-auto transition-transform duration-500 lg:hover:scale-105 lg:hover:brightness-105"
+        sizes="(min-width:1024px) 50vw, 100vw"
+        className="w-full h-auto object-cover lg:h-full"
         />
       </div>
       </div>

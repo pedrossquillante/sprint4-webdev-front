@@ -27,6 +27,8 @@
   --color-sobre-primaria: #ffffff;
   --color-destaque: #143fec;
   --color-erro: #c81e1e;
+  --color-painel: #0e1120;
+  --color-destaque-claro: #8ea2ff;
 
   --font-principal:"IBM Plex Sans", sans-serif;
   --font-titulo:"Sora", sans-serif;
@@ -46,11 +48,27 @@
   }
 }
 
+@utility titulo-secao { 
+  @apply text-3xl lg:text-5xl font-bold tracking-tight text-center mb-10 lg:mb-12 after:content-[''] after:block after:w-15 after:h-1 after:rounded-full after:mx-auto after:mt-6 after:bg-destaque;
+}
+
+@utility card { 
+  @apply bg-fundo-secundaria border border-borda rounded-2xl p-6 lg:p-8 shadow-sm dark:shadow-none;
+}
+
+@utility icone-caixa { 
+  @apply inline-flex size-12 items-center justify-center rounded-xl bg-destaque/10;
+}
+
+@utility icone { 
+  @apply bg-destaque mask-contain mask-no-repeat mask-center;
+}
+
 @layer base {
   body {
-  background-color: var(--color-fundo);
-  color: var(--color-texto);
-  font-family: var(--font-principal);
+    background-color: var(--color-fundo);
+    color: var(--color-texto);
+    font-family: var(--font-principal);
 }
 
 h1, h2, h3 {
@@ -84,3 +102,4 @@ h1, h2, h3 {
   color-scheme: light dark;
 }
 }
+
