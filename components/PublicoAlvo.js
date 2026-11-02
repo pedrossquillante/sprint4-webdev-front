@@ -35,7 +35,7 @@ export default function PublicoAlvo() {
         <div className="overflow-hidden rounded-2xl lg:h-full">
           <Image
             src="/images/estudantesfulltime1.webp"
-            alt="estudantes em sala de aula, interagindo com o celular na mão"
+            alt="estudante em sala de aula, interagindo com o celular na mão"
             width={1920}
             height={1080}
             sizes="(min-width:1024px) 50vw, 100vw"

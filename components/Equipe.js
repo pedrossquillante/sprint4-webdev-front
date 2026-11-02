@@ -6,26 +6,31 @@ export default function Equipe() {
       img: "/images/imagemGiovana.jpeg",
       nome: "Giovana",
       cargo: "Gestora e idealizadora do projeto",
+      alt: "Pessoa de moletom preto posando para foto na frente de um fundo branco",
     },
     {
       img: "/images/imagemGiovane.jpeg",
       nome: "Giovane",
       cargo: "UI/UX Designer e Desenvolvedor",
+      alt: "Reflexo no espelho de uma pessoa segurando celular posando para foto",
     },
     {
       img: "/images/imagemMie.jpeg",
       nome: "Mie",
       cargo: "Desenvolvedora de sistemas",
+      alt: "Pessoa usando óculos posando para foto na frente de fundo branco",
     },
     {
       img: "/images/imagemPedro.jpeg",
       nome: "Pedro",
       cargo: "UI/UX Designer e Desenvolvedor",
+      alt: "Pessoa de camisa branca posando para foto na frente de um fundo cinza",
     },
     {
       img: "/images/imagemThiago.png",
       nome: "Thiago",
       cargo: "Analista de TI",
+      alt: "Pessoa de camisa bege posando para foto na frente de um fundo cinza",
     },
   ];
 
@@ -48,7 +53,7 @@ export default function Equipe() {
             <figure className="flex flex-col gap-3">
               <Image
                 src={membro.img}
-                alt=""
+                alt={membro.alt}
                 width={200}
                 height={200}
                 sizes="140px"

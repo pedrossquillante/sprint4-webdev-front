@@ -63,9 +63,9 @@ itens instalados na sua máquina:
 # 4 - Como executar o projeto
 
 1. Certifique-se de que as dependências já foram instaladas em
-   [como instalar as dependências](#2---como-instalar-as-dependências)
+   [como instalar as dependências](#2---como-instalar-as-dependências) 
 
-2. No terminal, dentro da pasta do projeto (no VSCODE ou no terminal do sistema operacional), execute:
+2. No terminal, dentro da pasta do projeto (no VSCODE ou no terminal do sistema operacional), na branch `Main` execute:
    npm run dev
 
 3. Acesse no navegador:
@@ -74,9 +74,28 @@ itens instalados na sua máquina:
 
 # 5 - Onde e como foi utilizada a IA nesse projeto
 
-xxxxxx
+## Pedro
+
+Utilizei a IA principalmente como apoio na organização do código, com orientações sobre a estrutura de pastas, a divisão em componentes e a separação dos arquivos do projeto. Isso me ajudou a entender melhor como deixar tudo mais limpo e fácil de manter, algo em que eu ainda tinha dúvidas. Também recorri a ela no desenvolvimento da funcionalidade da galeria, onde fui auxiliado a construir um carrossel em React para implementá-la no projeto. Nesse processo, não me limitei a copiar o que foi sugerido: procurei entender a lógica por trás do carrossel, como o controle do slide atual e a navegação entre as imagens, e fiz os ajustes necessários para que ele funcionasse bem no meu projeto. Dessa forma, a IA funcionou como uma ferramenta de apoio e aprendizado, e as decisões finais e a integração do código foram feitas por mim.
+
+## Thiago
+
+A IA me auxiliou na Análise do código ao longo de todo o projeto, verificando a estrutura do código e me apontando erros ou possiveis melhorias, na conversão do projeto de CSS para TailwindCSS me deu suporte com a sintaxe na escrita do código, e no planejamento para melhorias com foco em contraste, acessibilidade e responsividade da Landing Page.
 
 # 6 - Link do Deploy na Vercel
 
 https://sprint4-webdev-front.vercel.app/
 
+# 7 - O que mudou na Landing Page da JOVI?
+
+- Modo Escuro automático (de acordo com o navegador do usuário)
+
+- Contraste otimizado
+
+- Ampliação no uso na navegação por teclado e link
+
+- Nomes acessíveis corretos e mensagens anunciadas ao leitor de tela
+
+- Respeito à preferência por movimento reduzido
+
+O foco das mudanças estão em melhorias no contraste, acessibilidade e manter a responsividade eficiente.
