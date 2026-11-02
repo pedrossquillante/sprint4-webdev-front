@@ -86,7 +86,11 @@ A IA me auxiliou na Análise do código ao longo de todo o projeto, verificando 
 
 https://sprint4-webdev-front.vercel.app/
 
-# 7 - O que mudou na Landing Page da JOVI?
+# 7 - Link do Projeto no Github
+
+https://github.com/pedrossquillante/sprint4-webdev-front
+
+# 8 - O que mudou na Landing Page da JOVI?
 
 - Modo Escuro automático (de acordo com o navegador do usuário)
 
